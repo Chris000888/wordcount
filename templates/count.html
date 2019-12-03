@@ -1,0 +1,22 @@
+<title>Count</title>
+<h1>COUNT</h1>
+<style>
+    body{
+        background-color: chocolate;
+    }
+
+</style>
+
+<p>There are {{count}} words in your text</p>
+<a href="{% url 'home' %}">Start again</a>
+<p><b>Your text is :</b></p> {{fulltext}}
+<h1>Word Count</h1>
+{% for word,total_count in word_dictionary %}
+
+{{ word }}
+<br/>
+{{ total_count }}
+<br/>
+
+{% endfor %}
+
